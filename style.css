@@ -1,0 +1,137 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', Tahoma, Geneva, Verdana, sans-serif, cursive;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#app-title {
+    padding-left: 40px;
+    margin: 10px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.form-item>* {
+    display: block;
+    width: 100%;
+}
+
+input.input-item {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #2c2c2c2e;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+button#calculate-btn {
+    padding: 10px;
+    margin: 20px;
+    font-weight: 700;
+    background-color: #57abfb;
+    color: #fff;
+}
+
+button#reset-btn {
+    padding: 10px;
+    margin: 20px;
+    font-weight: 700;
+    background-color: #c4c4c4;
+    color: rgb(0, 0, 0);
+    display: none;
+}
+
+.btn-block {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: unset;
+    transition: all ease-in .1s;
+}
+
+.btn-block:active {
+    transform: scale(.95)
+}
+
+#result {
+    width: 50%;
+    font-size: 10px;
+    display: none;
+}
+
+#result th,
+#result tr,
+#result td {
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Custom Spinner */
+div#loader-holder {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: brightness(0.5);
+    z-index: 33;
+}
+
+#loader-holder * {
+    color: #fff
+}
+
+.loader-spinner {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.loader-spinner:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: loader-spinner 1.2s linear infinite;
+}
+
+@keyframes loader-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Custom Spinner */

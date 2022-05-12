@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<style></style>
+
+<body>
+    <main>
+        <div id="loader-holder">
+            <div class="loader-spinner"></div>
+            <div>
+                <center><small>Calculating...</small></center>
+            </div>
+        </div>
+        <h1 id="app-title">Electricity Bill Calculator</h1>
+                <form action="" id="calculate-bill-form">
+                    <div class="form-item">
+
+                        <input type="number" step="any" min="0" name="number-of-units" id="number-of-units"
+                            placeholder="Numbers of units" class="input-item text-right" required>
+
+                        <input type="number" step="any" name="billing-period" id="billing-period"
+                            placeholder="Billing period (days)" class="input-item text-right" required>
+                    </div>
+                    <div class="form-item">
+                        <button class="btn-block" id="calculate-btn" type="submit">Calculate</button>
+                        <button class="btn-block" id="reset-btn" type="reset">Reset</button>
+                    </div>
+                </form>
+                <table id="result" class="table table-striped table-hover">
+                    <tbody>
+                        <tr>
+                            <td class=""><b>Number of Units</b></td>
+                            <td class="text-right" id="units-number"></td>
+                        </tr>
+                        <tr>
+                            <td class=""><b>Billing Period</b></td>
+                            <td class="text-right" id="billing-days"></td>
+                        </tr>
+                        <tr>
+                            <td class=""><b>Total without VAT</b></td>
+                            <td class="text-right" id="total-without-vat"></td>
+                        </tr>
+                        <tr>
+                            <td class=""><b>Total including VAT</b></td>
+                            <td class="text-right" id="total-including-vat"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <p>Caroline de Sa: 2020331</p>
+                <p>Leonardo Diesel: 2020302</p> -->
+    </main>
+</body>
+
+</html>

@@ -1,3 +1,5 @@
+const { __esModule } = require("async");
+
 window.start_loader = function () {
     const loader = document.getElementById('loader-holder')
     loader.style.display = 'flex';
@@ -20,14 +22,8 @@ window.onload = function () {
         const numberOfUnits = document.getElementById('number-of-units').value;
         const billingPeriod = document.getElementById('billing-period').value;
 
-        var VAT = 0.135
-        var rate = 0.20
-        var standingCharges = 0.04
-        var noVAT = 0
-        var yesVAT = 0;
-
-        noVAT = (parseFloat(numberOfUnits) * parseFloat(rate)) + (parseFloat(billingPeriod) * parseFloat(standingCharges));
-        yesVAT = parseFloat(noVAT) + (parseFloat(noVAT) * parseFloat(VAT));
+        noVAT = calculateBill(numberOfUnits, billingPeriod);
+        yesVAT = calculateBillYVat(noVAT);
 
         setTimeout(() => {
             document.getElementById('units-number').textContent = parseFloat(numberOfUnits).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 })

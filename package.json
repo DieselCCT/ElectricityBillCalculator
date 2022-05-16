@@ -2,9 +2,17 @@
     "name": "electricity-bill-calculator",
     "version": "1.0.0",
     "main": "index.html",
+    "scripts": {
+        "test": "mocha"
+    },
+    "developer": {
+        "showDevToolsOnStartup": true
+    },
     "dependencies": {
-        "async": "^2.1.4",
+        "async": "^2.6.4",
+        "chai": "^4.3.6",
+        "mocha": "^10.0.0",
         "nwbuild": "^0.0.5",
-        "osenv": "^0.1.4"
+        "osenv": "^0.1.5"
     }
 }

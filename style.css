@@ -1,7 +1,7 @@
 html,
 body {
-    height: 100%;
-    width: 100%;
+    height: 95%;
+    width: 95%;
     font-family: 'Arial', Tahoma, Geneva, Verdana, sans-serif, cursive;
 }
 
@@ -77,17 +77,19 @@ button#reset-btn {
 }
 
 #result {
-    width: 50%;
-    font-size: 10px;
+    padding-left: 40px;
+    width: 45%;
+    font-size: 12px;
     display: none;
 }
 
 #result th,
 #result tr,
 #result td {
+    border: 1px solid;
+    border-color: #4444442e;
     width: 50%;
     padding: 10px;
-    margin: 10px;
 }
 
 /* Custom Spinner */
@@ -134,4 +136,5 @@ div#loader-holder {
         transform: rotate(360deg);
     }
 }
+
 /* Custom Spinner */
